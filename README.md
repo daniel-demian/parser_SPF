@@ -1,20 +1,20 @@
-# SPF Checker Script
+# SPF parser
 
-This Python script checks the SPF policy in the DNS of a given domain and lists all IP addresses that are allowed to send emails on behalf of that domain. It parses the IP addresses from the SPF record and any included domains recursively.
+Python skript skontroluje SPF politiku v DNS danej domény a vypisuje zoznam všetkých IP adries, ktoré môžu odosielať e-maily v mene tejto domény.
 
-## Features
+## Funkcie
 
-- Fetches SPF record for a given domain
-- Parses IP addresses from the SPF record
-- Recursively handles included domains in the SPF record
-- Prevents re-processing of already visited domains
+- Vyhľadanie SPF záznamu pre danú doménu
+- Vyberanie IP adries zo záznamu SPF
+- Rekurzívne spracovanie domén, ktoré sú vypísané v zázname SPF
+- Zabraňuje opätovnému spracovaniu už navštívených domén
 
-## Prerequisites
+## Prerekvizity
 
 - Python 3.x
-- `dnspython` library
+- `dnspython` knižnica
 
-You can install the `dnspython` library using pip:
+Knižnica `dnspython` sa nainštaluje pomocou pip:
 
 ```sh
 pip install dnspython
