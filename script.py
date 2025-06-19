@@ -51,6 +51,9 @@ def get_all_ips(domain, visited_domains=set()):
 
 if __name__ == "__main__":
     domain = "somi.sk"
-    ip_addresses = get_all_ips(domain)
-    print("\nIP ADRESY:")
-    print(*ip_addresses, sep="\n")
+    ip_addresses = get_all_ips(domain) or []
+    if not ip_addresses:
+        print("Doména neobsahuje spf záznam")
+    else:
+        print("\nIP ADRESY:")
+        print(*ip_addresses, sep="\n")
